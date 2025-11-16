@@ -1,16 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Hello</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            margin: 20px auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        nav {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .project {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .project h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .project .subtext {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .reading-item {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+        }
+
+        .reading-item h3 {
+            color: #764ba2;
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+
+        .reading-item p {
+            color: #666;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>Welcome to My Website!</h1>
-<!-- Add an image of yourself that links to the about page -->
-<a href="./public/about.html" > <img src= "./assets/images/cat.png"/></a>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Website!</h1>
+            <!-- Add an image of yourself that links to the about page -->
+            <a href="./public/about.html">
+                <img src="./assets/images/cat.png" alt="Profile" class="profile-image"/>
+            </a>
+            <nav>
+                <a href="#background">Background</a>
+                <a href="#projects">Projects</a>
+                <a href="#reading-list">Reading List</a>
+                <a href="./public/contact.html">Contact Me</a>
+            </nav>
+        </header>
 
-<hr />
-<a href = "./public/contact.html" > Contact Me </a>
-<!-- Add a link to your contact me page here -->
+        <section id="background">
+            <h2>Background</h2>
+            <p>
+                Welcome! I'm passionate about creating meaningful experiences through technology and design. 
+                With a background in [your field/studies], I enjoy exploring new ideas and solving complex problems.
+            </p>
+            <p>
+                My journey has been shaped by [your experiences, education, or interests]. I believe in continuous 
+                learning and am always excited to take on new challenges that push me to grow both personally and professionally.
+            </p>
+            <p>
+                When I'm not coding or working on projects, you can find me [your hobbies or interests]. 
+                I'm always open to connecting with like-minded individuals and exploring new opportunities.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            
+            <div class="projects-grid">
+                <div class="project">
+                    <img src="./assets/images/cat.png" alt="Project 1" class="project-image"/>
+                    <div class="project-content">
+                        <h3>Project Title 1</h3>
+                        <p class="subtext">Brief description of your project. What problem does it solve? What technologies did you use?</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="./assets/images/cat.png" alt="Project 2" class="project-image"/>
+                    <div class="project-content">
+                        <h3>Project Title 2</h3>
+                        <p class="subtext">Another project description. Explain what makes this project interesting or unique.</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="./assets/images/cat.png" alt="Project 3" class="project-image"/>
+                    <div class="project-content">
+                        <h3>Project Title 3</h3>
+                        <p class="subtext">Add more projects as needed. Each project should highlight different skills or interests.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reading-list">
+            <h2>Reading List</h2>
+            <p>Here are some books, articles, and resources that have influenced my thinking and work:</p>
+            
+            <div class="reading-item">
+                <h3>Book Title 1</h3>
+                <p>Author Name - Brief description or why you recommend this book.</p>
+            </div>
+
+            <div class="reading-item">
+                <h3>Book Title 2</h3>
+                <p>Author Name - What you learned or found interesting about this book.</p>
+            </div>
+
+            <div class="reading-item">
+                <h3>Article or Resource Title</h3>
+                <p>Source - Why this resource is valuable or what insights it provided.</p>
+            </div>
+
+            <div class="reading-item">
+                <h3>Book Title 3</h3>
+                <p>Author Name - Add more reading recommendations as you discover new favorites.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 My Personal Website. All rights reserved.</p>
+            <p>Made with ❤️ with Cursor and deployed on AWS</p>
+        </footer>
+    </div>
 </body>
 </html>
